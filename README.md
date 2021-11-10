@@ -1,2 +1,3 @@
 # onedice.py
-Today, we stand as one
+
+本项目是[OneDice](https://github.com/OlivOS-Team/onedice)标准的范例
