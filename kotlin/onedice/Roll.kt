@@ -12,9 +12,21 @@ import onedice.nodes.CalNode
 import onedice.nodes.CalNodeStack
 import onedice.nodes.CalOperationNode
 import java.util.*
+import kotlin.math.floor
 import kotlin.math.pow
 
-class Roll(initData:String, private val customDefault: HashMap<Char, CalOperationDefault>?=null){
+/**
+ * Roll
+ *
+ * @property customDefault 参数默认值
+ * @property decimalEnable 是否使用启用浮点数运算
+ * @constructor
+ *
+ * @param initData 骰点表达式
+ */
+class Roll(initData:String,
+           private val customDefault: HashMap<Char, CalOperationDefault>?=null,
+           private val decimalEnable:Boolean = true){
     companion object {
         val dictOperationPriority = HashMap<Char, Short?>().apply {
             this['('] = null
@@ -168,6 +180,9 @@ class Roll(initData:String, private val customDefault: HashMap<Char, CalOperatio
                         }
                         "/"->{
                             tmpNodeThisOutput = tmpMainValLeft.resDouble / tmpMainValRight.resDouble
+                            if(!decimalEnable){
+                                tmpNodeThisOutput = floor(tmpNodeThisOutput)
+                            }
                             tmpNodeThisOutputStr = Format.build(
                                 "{replace}/{replace}",
                                 tmpMainValLeft.resDetail,
