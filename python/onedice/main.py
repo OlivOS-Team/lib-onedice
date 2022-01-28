@@ -17,7 +17,7 @@
 from enum import Enum
 import random
 
-pypi_version = '0.0.8'
+pypi_version = '1.0.0'
 
 dictOperationPriority = {
     '(' : None,
