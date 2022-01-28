@@ -6,7 +6,7 @@
 / /_/ / /|  / /___/ /_/ // // /___/ /___   
 \____/_/ |_/_____/_____/___/\____/_____/   
 
-@File      :   onedice.py
+@File      :   main.py
 @Author    :   lunzhiPenxil仑质
 @Contact   :   lunzhipenxil@gmail.com
 @License   :   AGPL
@@ -16,6 +16,8 @@
 
 from enum import Enum
 import random
+
+pypi_version = '0.0.8'
 
 dictOperationPriority = {
     '(' : None,
