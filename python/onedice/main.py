@@ -2389,6 +2389,7 @@ class RD(object):
                     tmp_node_this_output_str_1 = tmp_node_this_output_str
                     tmp_node_this_output_str_2 = '%d*%d+%d' % (tmp_add_roll_m, tmp_node_this_output_1, tmp_node_this_output_2)
                     tmp_node_this_output_data_2 = [tmp_add_roll_m, tmp_node_this_output_1, tmp_node_this_output_2]
+                    tmp_node_this_output_data_3 = [tmp_node_this_output]
                     tmp_node_this_output_str = '{%s}[%s](%d)' % (tmp_node_this_output_str_1, tmp_node_this_output_str_2, tmp_node_this_output)
                     # data主要处理流程
                     tmp_node_this_output_data['result'] = [
