@@ -2616,7 +2616,7 @@ class RD(object):
                         tmp_node_this_output_data_1.append(tmp_node_this_output_list_this)
                         tmp_node_this_output_str_2 += str(tmp_node_this_output_list_this)
                     tmp_node_this_output_data_2 = tmp_node_this_output_data_1
-                    tmp_node_this_output_data_3 = tmp_node_this_output
+                    tmp_node_this_output_data_3 = [tmp_node_this_output]
                     tmp_node_this_output_str = '{%s}[%s](%d)' % (tmp_node_this_output_str_1, tmp_node_this_output_str_2, tmp_node_this_output)
                     # data主要处理流程
                     tmp_node_this_output_data['result'] = [
