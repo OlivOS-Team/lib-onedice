@@ -51,6 +51,10 @@ dictOperationPriority = {
     '?' : 7
 }
 
+dictOperationMapping = {
+    'df' : 'f'
+}
+
 listOperationSub = [
     'm',
     'M',
@@ -520,8 +524,8 @@ class RD(object):
                     if self.getPriority(tmp_data_this) != None:
                         tmp_op_peek_this = op_stack.peek()
                         tmp_data_this_real = tmp_data_this
-                        if tmp_data_this.lower() == 'df':
-                            tmp_data_this_real = 'f'
+                        if tmp_data_this.lower() in dictOperationMapping:
+                            tmp_data_this_real = dictOperationMapping[tmp_data_this.lower()]
                         tmp_calOperationNode_this = calOperationNode(tmp_data_this_real, self.customDefault)
                         if not flag_left_as_number:
                             if tmp_op_peek_this == None:
