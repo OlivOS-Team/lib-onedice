@@ -425,7 +425,7 @@ class RD(object):
                     continue
                 tmp_data_this = tmp_data[it_offset:it_offset + lenOperation_this]
                 tmp_op_peek_this = op_stack.peek()
-                if tmp_op_peek_this != None:
+                if lenOperation_this == 1 and tmp_op_peek_this != None:
                     if tmp_op_peek_this.getPriority() != None:
                         if tmp_data_this in tmp_op_peek_this.vals:
                             flag_is_op_val = True
