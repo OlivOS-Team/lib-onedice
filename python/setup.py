@@ -20,7 +20,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="onedice",
-    version="1.0.2",
+    version="1.0.4",
     author="lunzhiPenxil",
     author_email="lunzhiPenxil@gmail.com",
     description="OneDice offical standard library for Python",
